@@ -135,6 +135,7 @@ var updateTries = function(){
 }
 
 var updateErrors = function(){
+
   return wrongArray;
 }
 

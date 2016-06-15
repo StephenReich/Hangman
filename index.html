@@ -30,7 +30,7 @@
     </div>
 
     <div class="wordSpace">
-        <label ng-model="currentArray">{{ game.word }}</label>
+        <label ng-repeat="letter in game.word track by $index">{{ letter }}</label>
     </div>
 
     <div class="userSpace">
@@ -47,7 +47,7 @@
         </div>
         <div id="line3">
             <label id="lblGuessed">Guessed:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <label id="letters" ng-model="wrongArray">{{ game.wrong }}</label>
+        <label id="letters" ng-repeat="letter in game.wrong track by $index">{{ letter }}</label>
         </div>
     </div>
 </body>
