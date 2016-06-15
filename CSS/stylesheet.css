@@ -1,0 +1,301 @@
+body {
+    background-image:url("http://southernsodservices.com/wp-content/uploads/2013/08/photo.jpg");
+    background-size: cover;
+}
+
+#title label{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-shadow:5px 5px 6px rgba(17,0,255,1);
+    color:beige;
+    border: 10px solid #4F4F4F;
+    letter-spacing: 65px;
+    font-size:55px;
+    text-align:center;
+    line-height:2;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.display{
+    position:relative;
+    display: block;
+}
+
+.display #setup{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 30px;
+}
+
+.display #head{
+    z-index: 999;
+    display:block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    left: 70px;
+    bottom: 230px;
+    /*animation: bounceInFace 2.5s;*/
+}
+
+.display #stickBody{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 50px;
+    transform: rotate(-45deg);
+    left: 70px;
+    bottom: 230px;
+}
+
+.display #leftArm{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 40px;
+    left: 85px;
+    bottom: 290px;
+}
+
+.display #rightArm{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 40px;
+    transform: rotate(90deg);
+    left: 55px;
+    bottom: 330px;
+}
+
+.display #rightLeg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 40px;
+    left: 56px;
+    bottom: 356px;
+}
+
+.display #leftLeg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 40px;
+    transform: rotate(90deg);
+    left: 85px;
+    bottom: 315px;
+}
+
+.wordSpace {
+    width: 100%;
+    position: absolute;
+    font-size: 60px;
+    bottom: 200px;
+    text-align: center;
+    text-shadow: -1px 0 white, 0 -2px gray, -2px 0 gray, 0 0px gray;
+}
+
+.correctLetter {
+    color:darkblue;
+}
+
+.userSpace{
+    background-image: url(../Assets/panel.jpg);
+    background-size: 100%;
+    position: fixed;
+    bottom: 0;
+    padding-left: 70px;
+    width: 100%;
+    height: 190px;
+}
+
+.userSpace #line1{
+    position: fixed;
+    bottom: 95px;
+    text-shadow: -2px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+}
+
+.userSpace #lblGuess{
+    color: lightgray;
+    font-size: 35px;
+}
+
+.userSpace #tbxInput{
+    width: 30%;
+    padding: 8px 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-color: lightgray;
+}
+
+input[type="text"]{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: blue;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.userSpace #btnEnter {
+  z-index: 999;
+	-moz-box-shadow: 2px 9px 48px 3px #fff6af;
+	-webkit-box-shadow: 2px 9px 48px 3px #fff6af;
+	box-shadow: 0px 0px 25px 4px #fff6af;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ff7700));
+	background:-moz-linear-gradient(top, #ffec64 5%, #ff7700 100%);
+	background:-webkit-linear-gradient(top, #ffec64 5%, #ff7700 100%);
+	background:-o-linear-gradient(top, #ffec64 5%, #ff7700 100%);
+	background:-ms-linear-gradient(top, #ffec64 5%, #ff7700 100%);
+	background:linear-gradient(to bottom, #ffec64 5%, #ff7700 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ff7700',GradientType=0);
+	background-color:#ffec64;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:2px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:4px 25px;
+	text-decoration:none;
+	text-shadow:-2px 2px 0px #ffee66;
+  position: relative;
+  left: 15px;
+}
+.userSpace #btnEnter:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff7700), color-stop(1, #ffec64));
+	background:-moz-linear-gradient(top, #ff7700 5%, #ffec64 100%);
+	background:-webkit-linear-gradient(top, #ff7700 5%, #ffec64 100%);
+	background:-o-linear-gradient(top, #ff7700 5%, #ffec64 100%);
+	background:-ms-linear-gradient(top, #ff7700 5%, #ffec64 100%);
+	background:linear-gradient(to bottom, #ff7700 5%, #ffec64 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7700', endColorstr='#ffec64',GradientType=0);
+	background-color:#ff7700;
+}
+
+.active {
+  animation: bounceInLogo 0.3s;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+
+.buttonClicked {
+  animation: buttonPush 0.15s;
+}
+
+.userSpace #correct {
+    width: 50px;
+    bottom: 8px;
+    left: 50px;
+    position: relative;
+}
+
+.userSpace #wrong {
+    position: relative;
+    width: 50px;
+    bottom: 8px;
+    left: 50px;
+}
+
+.userSpace #line2{
+    position: absolute;
+    bottom: 60px;
+    text-shadow: -2px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+}
+
+.userSpace #line2 #lblRemaining {
+    position: relative;
+    font-size: 25px;
+    color: lightgray;
+}
+
+.userSpace #line2 #numRemaining {
+    position: relative;
+    font-size: 30px;
+    color: yellow;
+    background-color: lightgray;
+    border-radius: 30px;
+    padding-left: 14px;
+    padding-right: 14px;
+    text-shadow: -2px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+}
+
+.userSpace #line3{
+    position:absolute;
+    bottom: 10px;
+    text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+}
+
+.userSpace #lblGuessed {
+    font-size: 35px;
+    color:lightgrey;
+}
+
+.userSpace #letters {
+    font-size: 30px;
+    color: red;
+    background-color: lightgray;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@keyframes bounceInFace {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(25.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceInLogo {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes buttonPush {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}

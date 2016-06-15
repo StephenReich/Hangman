@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app='Hangman'>
+<head>
+    <title>H&nbsp;A&nbsp;N&nbsp;G&nbsp;M&nbsp;A&nbsp;N</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css" />
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="animations.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="logic.js"></script>
+</head>
+
+<body ng-controller="WordCtrl as game">
+    <div id="title">
+        <label>HANGMAN</label>
+    </div>
+
+    <div class="display">
+      <img id="setup" src="Assets/setup.png">
+      <img id="head" src="Assets/head.png">
+      <img id="stickBody" src="Assets/stick.png">
+      <img id="leftArm" src="Assets/stick.png">
+      <img id="rightArm" src="Assets/stick.png">
+      <img id="leftLeg" src="Assets/stick.png">
+      <img id="rightLeg" src="Assets/stick.png">
+    </div>
+
+    <div class="wordSpace">
+        <label ng-model="currentArray">{{ game.word }}</label>
+    </div>
+
+    <div class="userSpace">
+        <div id="line1">
+            <label id="lblGuess">Guess a Letter/Word:</label>
+            <input id="tbxInput" type="text" name="userInput" />
+            <button id="btnEnter" ng-click="game.run()">TRY</button>
+            <img src="Assets/256.png" id="wrong" />
+            <img src="Assets/correct.png" id="correct" />
+        </div>
+        <div id="line2">
+            <label id="lblRemaining">Errors remaining:</label>
+            <label id="numRemaining" ng-model="errorsRemaining">{{ game.num }}</label>
+        </div>
+        <div id="line3">
+            <label id="lblGuessed">Guessed:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label id="letters" ng-model="wrongArray">{{ game.wrong }}</label>
+        </div>
+    </div>
+</body>
+
+</html>
