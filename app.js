@@ -3,6 +3,7 @@
 
   app.controller('WordCtrl', function(){
     generateRandomWord();
+    this.gameStart = generateRandomWord();
     this.word = updateWord();
     this.num = updateTries();
     this.wrong = updateErrors();
@@ -10,6 +11,7 @@
       $('#btnEnter').toggleClass("buttonClicked");
       guess = getInput();
       checkInput(guess);
+      this.answer = checkAnswer();
       updateWord();
       console.log("Errors: " + errorsRemaining);
       this.word = updateWord();
