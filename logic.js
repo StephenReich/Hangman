@@ -67,12 +67,10 @@ var checkInput = function(g){
         {
           errorsRemaining--;
           wrongArray.push(g.toUpperCase());
-          alert("INCORRECT! Letter does not exist.");
         }
       }
       else{
         console.log(currentArray);
-        alert("CORRECT! You guessed a letter!")
       }
       var matched = true;
       for(bar in wordArray)
@@ -84,6 +82,7 @@ var checkInput = function(g){
           }
       }
       if(matched == true){
+        updateWord();
         alert("CONGRATULATIONS! YOU WIN!");
         gameOver();
       }
@@ -91,6 +90,7 @@ var checkInput = function(g){
     }
     else if(gUpper.length == word.length){ //if the input has the same number of characters as the word, check to see if it is correct
       if(gUpper == word){
+        updateWord();
         alert("YOU GUESSED IT! YOU WIN!");
         gameOver();
       }
@@ -108,6 +108,7 @@ var checkInput = function(g){
   }
 
   if(errorsRemaining == 0){
+    updateWord();
     alert("GAME OVER: You ran out of tries. The word was " + word + ".")
     gameOver();
   }
@@ -148,13 +149,13 @@ var gameOver = function(){
 }
 
 $(document).ready(function(){
-  $('#btnEnter').click(function(){ //when "TRY" is clicked, run animation, and check input value from text box, update displayed word/placeholders
-    $('#btnEnter').toggleClass("buttonClicked");
-    guess = getInput();
-    checkInput(guess);
-    updateWord();
-    console.log("Errors: " + errorsRemaining);
-  });
+  // $('#btnEnter').click(function(){ //when "TRY" is clicked, run animation, and check input value from text box, update displayed word/placeholders
+  //   $('#btnEnter').toggleClass("buttonClicked");
+  //   guess = getInput();
+  //   checkInput(guess);
+  //   updateWord();
+  //   console.log("Errors: " + errorsRemaining);
+  // });
 
   $('#correct').click(function(){ //animation for check mark when input is correct
     $('#correct').toggleClass("active")
