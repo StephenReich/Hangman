@@ -5,6 +5,7 @@ var wordArray = [];
 var currentArray = [];
 var wrongArray = [];
 var errorsRemaining = 6;
+var answer = false;
 
 var generateRandomWord = function(){
   //temporary array of words
@@ -53,9 +54,9 @@ var checkInput = function(g){
 
         if(wrongArray.length >=1)
         {
-          for(foo in wrongArray)
+          for(i in wrongArray)
           {
-            if(wrongArray[foo] == g.toUpperCase().toString())
+            if(wrongArray[i] == g.toUpperCase().toString())
             {
               alert("You already guessed that!");
               foundLetter = true;
@@ -65,17 +66,19 @@ var checkInput = function(g){
         }
         if(foundLetter == false && foundExists == false)
         {
+          answer = false;
           errorsRemaining--;
           wrongArray.push(g.toUpperCase());
         }
       }
       else{
+        answer = true;
         console.log(currentArray);
       }
       var matched = true;
-      for(bar in wordArray)
+      for(i in wordArray)
       {
-          if(wordArray[bar].toString() !== currentArray[bar].toString())
+          if(wordArray[i].toString() !== currentArray[i].toString())
           {
             matched = false;
             break;
@@ -90,12 +93,17 @@ var checkInput = function(g){
     }
     else if(gUpper.length == word.length){ //if the input has the same number of characters as the word, check to see if it is correct
       if(gUpper == word){
+        for(i in word){
+          currentArray[i] = word.charAt(i);
+        }
+        console.log(currentArray);
         updateWord();
         alert("YOU GUESSED IT! YOU WIN!");
         gameOver();
       }
       else {
         errorsRemaining--;
+        answer = false;
         alert("INCORRECT! That is not the word.");
       }
     }
@@ -140,6 +148,10 @@ var updateErrors = function(){
   return wrongArray;
 }
 
+var checkAnswer = function(){
+  return answer;
+}
+
 var gameOver = function(){
   errorsRemaining = 6;
   wrongArray = [];
@@ -149,14 +161,6 @@ var gameOver = function(){
 }
 
 $(document).ready(function(){
-  // $('#btnEnter').click(function(){ //when "TRY" is clicked, run animation, and check input value from text box, update displayed word/placeholders
-  //   $('#btnEnter').toggleClass("buttonClicked");
-  //   guess = getInput();
-  //   checkInput(guess);
-  //   updateWord();
-  //   console.log("Errors: " + errorsRemaining);
-  // });
-
   $('#correct').click(function(){ //animation for check mark when input is correct
     $('#correct').toggleClass("active")
   });
