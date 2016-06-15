@@ -35,10 +35,10 @@
     <div class="userSpace">
         <div id="line1">
             <label id="lblGuess">Guess a Letter/Word:</label>
-            <input id="tbxInput" type="text" name="userInput" />
+            <input id="tbxInput" type="text" name="userInput"/>
             <button id="btnEnter" ng-click="game.run()">TRY</button>
-            <img src="Assets/256.png" id="wrong" />
-            <img src="Assets/correct.png" id="correct" />
+            <img src="Assets/256.png" id="wrong" ng-hide="game.gameStart" ng-hide="game.answer == true" ng-show="game.answer == false" />
+            <img src="Assets/correct.png" id="correct" ng-hide="game.gameStart" ng-hide="game.answer == false" ng-show="game.answer == true"/>
         </div>
         <div id="line2">
             <label id="lblRemaining">Errors remaining:</label>
