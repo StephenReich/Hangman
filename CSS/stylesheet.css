@@ -206,6 +206,7 @@ input[type="text"]{
     bottom: 8px;
     left: 50px;
     position: relative;
+    animation: bounceInLogo 0.4s;
 }
 
 .userSpace #wrong {
@@ -213,6 +214,8 @@ input[type="text"]{
     width: 50px;
     bottom: 8px;
     left: 50px;
+    animation: bounceInLogo 0.4s;
+
 }
 
 .userSpace #line2{
