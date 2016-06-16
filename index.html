@@ -20,12 +20,12 @@
 
     <div class="display">
       <img id="setup" src="Assets/setup.png">
-      <img id="head" src="Assets/head.png">
-      <img id="stickBody" src="Assets/stick.png">
-      <img id="leftArm" src="Assets/stick.png">
-      <img id="rightArm" src="Assets/stick.png">
-      <img id="leftLeg" src="Assets/stick.png">
-      <img id="rightLeg" src="Assets/stick.png">
+      <img id="head" ng-src="Assets/head.png" ng-hide="game.gameStart" ng-show="game.num <= 5">
+      <img id="stickBody" ng-src="Assets/stick.png" ng-hide="game.gameStart" ng-show="game.num <= 4">
+      <img id="leftArm" ng-src="Assets/stick.png" ng-hide="game.gameStart" ng-show="game.num <= 3">
+      <img id="rightArm" ng-src="Assets/stick.png" ng-hide="game.gameStart" ng-show="game.num <= 2">
+      <img id="leftLeg" ng-src="Assets/stick.png" ng-hide="game.gameStart" ng-show="game.num <= 1" >
+      <img id="rightLeg" ng-src="Assets/stick.png" ng-hide="game.gameStart" ng-show="game.num == 0">
     </div>
 
     <div class="wordSpace">
