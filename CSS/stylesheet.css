@@ -43,7 +43,7 @@ body {
     width: 60px;
     left: 70px;
     bottom: 230px;
-    /*animation: bounceInFace 2.5s;*/
+    animation: bounceInFace 2.5s;
 }
 
 .display #stickBody{
@@ -113,7 +113,7 @@ body {
 }
 
 .userSpace{
-    background-image: url(../Assets/panel.jpg);
+    background-image: url("../Assets/panel.jpg");
     background-size: 100%;
     position: fixed;
     bottom: 0;
