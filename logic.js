@@ -155,9 +155,12 @@ var checkAnswer = function(){
 var gameOver = function(){
   errorsRemaining = 6;
   wrongArray = [];
-  generateRandomWord();
-  updateTries();
-  updateErrors();
+  currentArray = [];
+  setTimeout(function(){
+    generateRandomWord();
+    updateWord();
+    updateTries();
+    updateErrors();  }, 2000);
 }
 
 $(document).ready(function(){

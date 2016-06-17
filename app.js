@@ -2,7 +2,6 @@
   var app = angular.module('Hangman', []);
 
   app.controller('WordCtrl', function(){
-    generateRandomWord();
     this.gameStart = generateRandomWord();
     this.word = updateWord();
     this.num = updateTries();
