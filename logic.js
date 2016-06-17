@@ -15,6 +15,7 @@ var generateRandomWord = function(){
   var selected = wordList[Math.floor((Math.random() * length))];
   console.log(selected);
   word = selected;
+  wordArray = [];
   for(i in word){ //replace each letter with a placeholder for the user to see how many spaces exist
     currentArray[i] = "_";
     wordArray[i] = word.charAt(i);
@@ -156,11 +157,10 @@ var gameOver = function(){
   errorsRemaining = 6;
   wrongArray = [];
   currentArray = [];
-  setTimeout(function(){
-    generateRandomWord();
-    updateWord();
-    updateTries();
-    updateErrors();  }, 2000);
+  generateRandomWord();
+  updateWord();
+  updateTries();
+  updateErrors();
 }
 
 $(document).ready(function(){
