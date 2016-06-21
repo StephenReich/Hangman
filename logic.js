@@ -6,6 +6,7 @@ var currentArray = [];
 var wrongArray = [];
 var errorsRemaining = 6;
 var answer = false;
+var finished = false;
 
 var generateRandomWord = function(){
   //temporary array of words
@@ -87,8 +88,13 @@ var checkInput = function(g){
       }
       if(matched == true){
         updateWord();
-        alert("CONGRATULATIONS! YOU WIN!");
-        gameOver();
+        setTimeout(function(){
+          alert("CONGRATULATIONS! YOU WIN!");
+          finished = true;
+          gameOver();
+        }, 300);
+
+
       }
 
     }
@@ -99,8 +105,11 @@ var checkInput = function(g){
         }
         console.log(currentArray);
         updateWord();
-        alert("YOU GUESSED IT! YOU WIN!");
-        gameOver();
+        setTimeout(function(){
+          alert("YOU GUESSED IT! YOU WIN!");
+          finished = true;
+          gameOver();
+        }, 300);
       }
       else {
         errorsRemaining--;
@@ -118,8 +127,11 @@ var checkInput = function(g){
 
   if(errorsRemaining == 0){
     updateWord();
-    alert("GAME OVER: You ran out of tries. The word was " + word + ".")
-    gameOver();
+    setTimeout(function(){
+      alert("SORRY! You ran out of tries. The word was " + word + ".");
+      finished = true;
+      gameOver();
+    }, 300);
   }
   return currentArray;
 }
@@ -151,6 +163,10 @@ var updateErrors = function(){
 
 var checkAnswer = function(){
   return answer;
+}
+
+var checkFinished = function(){
+  return finished;
 }
 
 var gameOver = function(){
